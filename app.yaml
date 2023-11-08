@@ -1,0 +1,29 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+instance_class: F1
+
+# automatic_scaling:
+#   target_cpu_utilization: 0.65
+#   min_instances: 1
+#   max_instances: 15
+#   target_throughput_utilization: 0.6
+
+# env_variables:
+#   SECRET_KEY: "your-secret-key"
+
+network:
+  instance_tag: "flask_dev"
+  name: "default"
+  subnetwork_name: "default"
+
+resources:
+  cpu: 1
+  memory_gb: 0.6
+  disk_size_gb: 10
+
+handlers:
+- url: /.*
+  static_dir: static
+  secure: always
+  script: auto
