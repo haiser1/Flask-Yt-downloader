@@ -22,6 +22,7 @@
                 <div class="card-body">
                   <p class="card-text">
                     <div class="col-md-5">
+                      <h3>Pilih Resolusi</h3>
                       <select name="itag" class="form-select input-sm"  aria-label="Default select example">
                           {% for i in url.streams.filter(progressive=True) %}
                               <option value="{{ i.itag }}"> {{ i.resolution }} </option>
