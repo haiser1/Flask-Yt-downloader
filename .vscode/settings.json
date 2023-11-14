@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/d7a8024c-28c5-48b1-945d-f4f309adf2ec/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/mark-yt-downloader",
+    "appService.deploySubpath": "."
+}
